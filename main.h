@@ -1,5 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
+
+#include <stdarg.h>
 /**
  * struct print_data - structure for printing data
  * @type: type of format
