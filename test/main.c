@@ -10,5 +10,6 @@
 int main(void)
 {
 	_printf("%c\n", 'H');
+	_printf("%s\n", "Hello world");
 	return (0);
 }

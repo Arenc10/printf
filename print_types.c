@@ -9,13 +9,12 @@ void pr_char(va_list char_list)
 }
 void pr_string(va_list string_list)
 {
+	char *s;
 	int i;
-	char s;
-	for (i = 0; string_list[i] != '\0'; i++)
-	{
-		s = va_arg(string_list[i]);
-		_putchar(s);
-	}
+	s = va_arg(string_list, char*);
+	
+	for (i = 0; s[i] != '\0'; i++)
+		_putchar(s[i]);
 }
 void pr_float(va_list float_list);
 void pr_int(va_list int_list);
