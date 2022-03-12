@@ -13,5 +13,9 @@ typedef struct print_data
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+void pr_char(va_list char_list);
+void pr_int(va_list int_list);
+void pr_float(va_list float_list);
+void pr_string(va_list string_list);
 
 #endif
