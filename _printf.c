@@ -8,7 +8,8 @@ int _printf(const char *format, ...)
 	int i, j;
 	print_data p_func[] = {
 		{"s", pr_string},
-		{"c", pr_char}
+		{"c", pr_char},
+		{"i", pr_int}
 	};
 
 	va_start(ag_list, format);
@@ -16,9 +17,9 @@ int _printf(const char *format, ...)
 	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
-		while (j < 2 && (format[i] != *p_func[j].type))
+		while (j < 3 && (format[i] != *p_func[j].type))
 			j++;
-		if (j < 2)
+		if (j < 3)
 			p_func[j].print(ag_list);
 		i++;
 	}

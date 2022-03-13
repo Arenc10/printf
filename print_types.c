@@ -23,4 +23,11 @@ int pr_string(va_list string_list)
 	return (i);
 }
 int pr_float(va_list float_list);
-int pr_int(va_list int_list);
+int pr_int(va_list int_list)
+{
+	int i;
+	i = va_arg(int_list, int);
+	_putchar(i + '0');
+
+	return (i);
+}
