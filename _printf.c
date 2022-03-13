@@ -6,13 +6,22 @@ int _printf(const char *format, ...)
 {
 	va_list ag_list;
 	int i, j;
-	
 	print_data p_func[] = {
-		{"c", pr_char},
+		{"s", pr_string},
+		{"c", pr_char}
 	};
 
 	va_start(ag_list, format);
-	p_func->print(ag_list);
+	i = 0;
+	while (format != NULL && format[i] != '\0')
+	{
+		j = 0;
+		while (j < 2 && (format[i] != *p_func[j].type))
+			j++;
+		if (j < 2)
+			p_func[j].print(ag_list);
+		i++;
+	}
 	_putchar('\n');
 
 	va_end(ag_list);
