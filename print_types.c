@@ -22,5 +22,5 @@ int pr_string(va_list string_list)
 
 	return (i);
 }
-void pr_float(va_list float_list);
-void pr_int(va_list int_list);
+int pr_float(va_list float_list);
+int pr_int(va_list int_list);
