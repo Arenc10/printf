@@ -27,7 +27,16 @@ int pr_int(va_list int_list)
 {
 	int i;
 	i = va_arg(int_list, int);
-	_putchar(i + '0');
+
+	if (i < 0)
+	{
+		_putchar('-');
+		i = i * -1;
+	}
+	for (; i = i / 10; )
+	{
+		_putchar(i % 10 + '0');
+	}
 
 	return (i);
 }
