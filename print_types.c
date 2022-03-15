@@ -14,6 +14,11 @@ int pr_char(va_list char_list)
 
 	return (1);
 }
+/**
+ * pr_string - Function that printg string
+ * @string_list: First operand a va list
+ * Return: Returns an int or 0
+ */
 int pr_string(va_list string_list)
 {
 	char *s;
