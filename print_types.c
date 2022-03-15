@@ -22,7 +22,45 @@ int pr_string(va_list string_list)
 
 	return (i);
 }
-int pr_float(va_list float_list);
+int pr_decimal(va_list decimal_list)
+{
+	int n = va_arg(decimal_list, int);
+	int last = n % 10;
+	int expo = 1;
+	int i = 1;
+	int num;
+	int dig;
+
+	n = n / 10;
+	num = n;
+
+	if (last < 0)
+	{
+		_putchar('-');
+		n = n * -1;
+		last = last * -1;
+		i++;
+	}
+	if (num > 0)
+	{
+		while (num / 10 != 0)
+		{
+			expo = expo * 10;
+			num = num / 10;
+		}
+		num = n;
+		while (expo > 0)
+		{
+			dig = num / expo;
+			_putchar(dig + '0');
+			num = num - (dig * expo);
+			expo = expo / 10;
+			i++;
+		}
+	}
+	_putchar(last + '0');
+	return (i);
+}
 int pr_int(va_list int_list)
 {
 	int n = va_arg(int_list, int);
