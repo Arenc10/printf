@@ -1,7 +1,12 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdlib.h>
-
+/**
+ * _printf - A function that prints everything
+ * @format: pointer to constant char
+ * @...: Second operand other args
+ * Return: Return an int or 0
+ */
 int _printf(const char *format, ...)
 {
 	va_list ag_list;
@@ -11,7 +16,7 @@ int _printf(const char *format, ...)
 		{"s", pr_string},
 		{"c", pr_char},
 		{"i", pr_int},
-		{"d", pr_decimal}, 
+		{"d", pr_decimal},
 		{NULL, NULL}
 	};
 

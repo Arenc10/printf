@@ -4,14 +4,14 @@
 .SH NAME
 _printf
 .SH SYNOPSIS
-.TP 
-#include "main.h" 
-.TP 
+.TP
+#include "main.h"
+.TP
 _printf(const char *format, ...);
 .SH DESCRIPTION
 The function _printf() produce output according a format like %c, %s, %d or %i;
 .SS Conversion specifier
-.TP 
+.TP
 %c
 _printf("%c", character); print a character
 .TP

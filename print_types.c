@@ -9,6 +9,7 @@
 int pr_char(va_list char_list)
 {
 	char c;
+
 	c = va_arg(char_list, int);
 	_putchar(c);
 
@@ -23,9 +24,10 @@ int pr_string(va_list string_list)
 {
 	char *s;
 	int i;
+
 	s = va_arg(string_list, char*);
 	if (s == NULL)
-		s = "NULL";
+		s = "(null)";
 	for (i = 0; s[i] != '\0'; i++)
 		_putchar(s[i]);
 
@@ -76,6 +78,11 @@ int pr_decimal(va_list decimal_list)
 	_putchar(last + '0');
 	return (i);
 }
+/**
+ * pr_int - Function that prints an integer
+ * @int_list: First operand a va list
+ * Return: Return an int or 0
+ */
 int pr_int(va_list int_list)
 {
 	int n = va_arg(int_list, int);
@@ -87,7 +94,7 @@ int pr_int(va_list int_list)
 
 	n = n / 10;
 	num = n;
-	
+
 	if (last < 0)
 	{
 		_putchar('-');
