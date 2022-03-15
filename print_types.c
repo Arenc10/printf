@@ -37,6 +37,7 @@ int pr_decimal(va_list decimal_list)
 	if (last < 0)
 	{
 		_putchar('-');
+		num = num * -1;
 		n = n * -1;
 		last = last * -1;
 		i++;
