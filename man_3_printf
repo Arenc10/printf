@@ -9,17 +9,17 @@ _printf
 .TP 
 _printf(const char *format, ...);
 .SH DESCRIPTION
-The function _printf() 
+The function _printf() produce output according a format like %c, %s, %d or %i;
 .SS Conversion specifier
 .TP 
 %c
-print a character
+_printf("%c", character); print a character
 .TP
 %s
-print a pointer to an array of character type (a pointer to a string)
+_printf("Hello"); or _printf("%s", "hello"); print a pointer to an array of character type (a pointer to a string)
 .TP
 %d, %i
-print a number
+_printf("%d", 1024) or _printf("%i", 1024); print a number
 .SH RETURN VALUE
 Return the number of characters printed (excluding the null byte used to end output to strings)
 .SH BUGS
