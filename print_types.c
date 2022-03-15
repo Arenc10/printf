@@ -31,6 +31,11 @@ int pr_string(va_list string_list)
 
 	return (i);
 }
+/**
+ * pr_decimal - Function that prints decimal numbers
+ * @decimal_list: First operand a va list
+ * Return: Returns an int or 0
+ */
 int pr_decimal(va_list decimal_list)
 {
 	int n = va_arg(decimal_list, int);
