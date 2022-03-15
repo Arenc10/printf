@@ -54,9 +54,8 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
-	_putchar('\n');
 
 	va_end(ag_list);
 
-	return (0);
+	return (len);
 }
