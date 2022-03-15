@@ -1,0 +1,28 @@
+.\" Manpage for _printf.
+.\" Contact https://github.com/Arenc10 and https://github.com/KristiSeraj to correct errors.
+.TH _PRINTF 3 "14 March 2022" "1.0" "_PRINTF MAN PAGE"
+.SH NAME
+_printf
+.SH SYNOPSIS
+.TP 
+#include "main.h" 
+.TP 
+_printf(const char *format, ...);
+.SH DESCRIPTION
+_printf is a command to print
+.SS Conversion specifier
+.TP 
+%c
+print a character
+.TP
+%s
+print a pointer to an array of character type (a pointer to a string)
+.TP
+%d, %i
+print a number
+.SH RETURN VALUE
+Return the number of characters printed (excluding the null byte used to end output to strings)
+.SH BUGS
+no known bugs
+.SH AUTHOR
+Arenc Palluqi (https://github.com/Arenc10) Kristi Seraj (https://github.com/KristiSeraj)
