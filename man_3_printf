@@ -9,7 +9,7 @@ _printf
 .TP 
 _printf(const char *format, ...);
 .SH DESCRIPTION
-_printf is a command to print
+The function _printf() 
 .SS Conversion specifier
 .TP 
 %c
