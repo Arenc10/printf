@@ -22,7 +22,23 @@ _printf("Hello"); or _printf("%s", "hello"); print a pointer to an array of char
 _printf("%d", 1024) or _printf("%i", 1024); print a number
 .SH RETURN VALUE
 Return the number of characters printed (excluding the null byte used to end output to strings)
+.SH EXAMPLE
+This is a basic example of using _printf function
+.RS
+#include "main.h"
+
+int main(void)
+.TP
+{
+.IP
+_printf("The %s is %d", "number", 1024);
+.IP
+return (0);
+.TP
+}
+.TP
+Output: The number is 1024
 .SH BUGS
-no known bugs
+No known bugs
 .SH AUTHOR
 Arenc Palluqi (https://github.com/Arenc10) Kristi Seraj (https://github.com/KristiSeraj)
