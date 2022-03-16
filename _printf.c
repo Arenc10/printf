@@ -21,8 +21,16 @@ int _printf(const char *format, ...)
 	};
 
 	va_start(ag_list, format);
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	/**if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (0);
+	*/
+	if (format == NULL)
+		return (NULL);
+	if (format[0] == '%' && format[1] == '\0')
+	{
+		_putchar('%');
+		return (0);
+	}
 	i = 0;
 	while (format != NULL && format[i] != '\0')
 	{
