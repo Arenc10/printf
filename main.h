@@ -19,5 +19,4 @@ int pr_char(va_list char_list);
 int pr_int(va_list int_list);
 int pr_decimal(va_list decimal_list);
 int pr_string(va_list string_list);
-
 #endif
